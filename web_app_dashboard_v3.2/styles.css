@@ -25,6 +25,7 @@ font-size: 1em;
 h3{
 
     font-size: 0.8em;
+    margin-bottom: 15px;
   
     
     }
@@ -36,13 +37,59 @@ h3{
 }
 
 .bell{
-
+    
     /* margin-top: 5px; */
     margin-right: 5px;
     border-right:   1px solid cornsilk;
 
 
 }
+
+/* Dropdown Button */
+.noti_icon {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  
+  
+  /* The container <div> - needed to position the dropdown content */
+  .bell {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+
+
+
 
 .main-header{
 
@@ -57,22 +104,36 @@ h2{
 
 
     font-size: 0.9em ;
-    padding-left: 12px;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
+.tab-text{
+
+background: white;
+width: 20%;
+margin-right: 30px;
+
+}
 .tab-box{
 
-    margin-top: -40px;
-    background-color: rgb(214, 211, 211);
-    border: 1px solid rgb(214, 211, 211);
-    width: 70%;
-    height: 80px;
-    z-index: -1;
+    display:flex;
+    width: 100%;
+    text-align: center;
+
+}
+
+.tab-background{
+
+    background: lightgrey;
+    width: 80%;
+    height: 35px ;
+
 }
 
 .profile-image{
 
-width: 15%;
+width: 25%;
 height: auto;
 border-radius: 50%;
   /* border: 3px solid white; */
@@ -179,18 +240,19 @@ grid-template-areas:
    
 
     .members{
-
-        margin-left: 20px;
-        margin-right: 20px;
+        
+        padding-left: 20px;
+        padding-right: 20px;
         margin-top: 40px;
+
 
     }
 
     .members-container{
 
         text-align: center;
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin-top: 12px;
+        margin-bottom: 12px;
         border-bottom: 1px solid grey;
         padding: 16px;
 
@@ -230,6 +292,15 @@ grid-template-areas:
 
             margin-top: 40px;
             margin-bottom: 40px;
+            padding: 5px;
+            /* max-width: calc(); */
+        padding-left: auto;
+
+    }
+
+    .last{
+
+        border-bottom: none;
 
     }
 
@@ -238,17 +309,30 @@ grid-template-areas:
         
         display: flex;
         flex-direction: column;
-        
-        background-color: purple;
         padding: 5px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid grey;
+        border-top: 1px solid grey;
+       
     
+
+    }
+
+    .widget-container{
+
+
+        text-align: center;
+
 
     }
 
     .form-field, .form-area, .button-primary{
 
         width: 90%;
+        margin: 0 auto;
         margin-top: 10px;
+        
         
     }
 
@@ -273,34 +357,37 @@ grid-template-areas:
     .settings-button{
 
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
 
     }
 
     .button-primary-save, .button-disabled{
 
-        width: 42%;
+        /* width: calc(45% - ); */
+        width: 42.5%;
+
+    }
+
+    #timezone{
+        margin-bottom: 12px;
+
+
+        display: flex;
 
     }
 
 
-
-
-                                     /* MEDIA QUERY!!!!!!! */
+                                     /*!!!!!!!!!!!!!!!!!!!!!!!!!!! MEDIA QUERY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 
     @media (min-width: 768px) {
 
 
 
-
-
-
-
-
-
     .grid-container {
-    grid-template-columns: 55px 1fr;
+
+
+    grid-template-columns: 120px 1fr;
     grid-template-areas:
     "header header"
     "navigation main";
@@ -310,9 +397,8 @@ grid-template-areas:
 
         display: flex;
         flex-direction: column;
-
-       justify-content: flex-start;
-       margin: 0 auto;
+       /* justify-content: flex-start;
+       margin: 0 auto; */
 
     }
 
@@ -327,15 +413,16 @@ grid-template-areas:
         grid-template-columns: 50% ;
     }
 
-    .traffic, .social {
+
+    .traffic,  .main-header, .alert, .message, .members, .social, .small-graphs-tablet, .settings{
         grid-column: 1 / span 2;
         }
 
-        .daily, .members, .message {
+        .bar{
             grid-column: 1 / span 1;
             }
             
-            .mobile, .activity, .settings {
+            .doughnut, .mobile, .activity {
                 grid-column: 2 / span 1;
                 }
 
@@ -346,16 +433,152 @@ grid-template-areas:
                     width: 40vw;
                     }
 
+                   
+        .traffic{
 
+            margin: 0 auto;
 
-
-
-        .tab-box{
             
+        }
+        .traffic-header{
+
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .traffic-nav{
+
+            display: flex;
+            justify-content: space-around;
+
         }
 
 
+
+        .social{
+
+            display: flex;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid grey;
+        }
+
+        .social-container{
+
+            border-bottom: none;
+
+        }
+
+        .members{
+          
+ /* put a bottom border on this */
+        }
+        .members-container{
+
+            display: flex;
+            align-items: center; 
+            text-align: left;
+            
+        }
+
+        .members-text{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .profile-image{
+
+
+                margin-right: 14px;
+
+        }
+        
+
+        .small-graphs-tablet{
+
+            border-top:1px solid grey ;
+            border-bottom: 1px solid grey;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        
+            
+
+        }
+
+        .widget-container-half, .widget-container-full{
+
+
+            border-bottom: none;
+        }
+        
+        .bar{
+
+            border-right: 1px solid grey;
+            padding: 20px;
+        }
+
+        .doughnut{
+
+            padding: 20px;
+        }
+
+        .settings{
+
+            display: flex;
+            flex-direction: column;
+            
+            
+
+
+        }
+        
+        .toggle-container{
+
+            align-self: flex-start;
+            width: 50%;
+        
+        }
+
+        .profile-image{
+
+            width: 10%
+
+        }
+
     }
 
-    
+
+
+                                     /*!!!!!!!!!!!!!!!!!!!!!!!!!!! MEDIA QUERY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+    @media (min-width: 1024px) {
+
+
+        .members, .message{
+            grid-column: 1 / span 1;
+            }
+
+        
+
+            .settings{
+                grid-column: 2 / span 1;
+                }
+
+
+        .message, .settings{
+
+                justify-content: space-between;
+
+        }
+
+
+
+
+
+
+
+    }
         
