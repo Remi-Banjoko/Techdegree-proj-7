@@ -10,12 +10,34 @@
 
 .flex-container{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     background-color: blueviolet;
     padding: 10px;
     align-items: center;
+    align-content: center;
 }
+
+.header-image{
+
+    width: 10%;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+.idk{
+
+
+flex-direction: row;
+width: 100%
+
+}
+.header-text{
+
+    margin:0;
+
+}
+
 
 h1{
 
@@ -46,13 +68,14 @@ h3{
 }
 
 /* Dropdown Button */
-.noti_icon {
+/* .noti_icon {
     color: white;
-    padding: 16px;
-    font-size: 16px;
     border: none;
     cursor: pointer;
-  }
+
+    width:25px;
+    height: 25px;
+  } */
   
   /* Dropdown button on hover & focus */
   
@@ -89,7 +112,30 @@ h3{
 
 
 
+ul{
 
+    list-style-type: none;
+  
+}
+
+.nav-button{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 70px;
+height: 35px;
+border-radius: 40px;
+color: white;
+background: yellowgreen;
+
+}
+
+/* .nav-button:active {
+
+color: white;
+background: yellowgreen;
+
+} */
 
 .main-header{
 
@@ -191,7 +237,7 @@ grid-template-areas:
         border-bottom: 1px solid grey ;
         }
 
-    .traffic-nav{
+    #traffic-nav{
 
         display: flex;
        justify-content: space-evenly;
@@ -447,7 +493,7 @@ grid-template-areas:
 
         }
 
-        .traffic-nav{
+        #traffic-nav{
 
             display: flex;
             justify-content: space-around;

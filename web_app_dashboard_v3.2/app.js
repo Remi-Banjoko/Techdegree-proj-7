@@ -18,7 +18,52 @@ alertBanner.innerHTML =    `<div class="alert-banner">
  function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
-                           
+
+
+
+const trafficNav = document.getElementById("traffic-nav");
+
+trafficNav.addEventListener('click', e => {
+    const element = e.target;
+    if (element.classList.contains("hourly")) {
+        var tab = document.getElementById("hourly");
+        tab.classList.toggle("nav-button");
+        updateChart(trafficCanvas, trafficHourly);
+
+    }
+    else if (element.classList.contains("daily")) {
+        var tab = document.getElementById("daily");
+        tab.classList.toggle("nav-button");
+        updateChart(trafficCanvas, trafficDaily);
+    }
+    });
+
+
+   let trafficHourly = { 
+        labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+        datasets: [{
+          data: [900, 200, 0, 2000, 3000, 4, 300, 650, 250, 15,
+            500],
+        }]
+    }
+
+    let trafficDaily = { 
+        labels: ["1", "2", "3", "4", "5", "6", "7"],
+        datasets: [{
+          data: [1000, 2000, 0, 1500, 100, 4, 300, 650, 250, 15,
+            400],
+        }]
+    }
+
+
+    const updateChart = (chart, newData) => {
+
+
+            chart.data.labels = newData.labels;
+            chart.data.datasets[0].data = newData.datasets[0].data;
+            chart.update();
+
+    }
 
 const trafficCanvas = document.getElementById("traffic-chart");
 let trafficData = {
