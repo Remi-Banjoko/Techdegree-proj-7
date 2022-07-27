@@ -32,6 +32,14 @@ flex-direction: row;
 width: 100%
 
 }
+
+.arrow{
+
+    display: none;
+
+}
+
+
 .header-text{
 
     margin:0;
@@ -44,11 +52,12 @@ h1{
 font-size: 1em;
 
 }
+
 h3{
 
     font-size: 0.8em;
-    margin-bottom: 15px;
-  
+    margin-top: 10px;
+    margin-left: 10px;
     
     }
 .icon{
@@ -57,6 +66,14 @@ h3{
     height: 25px;
 
 }
+
+.navi{
+
+
+}
+
+
+
 
 .bell{
     
@@ -110,12 +127,49 @@ h3{
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
 
+  #results{
 
+
+    left: 26%;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 0 auto;
+}
+
+
+path{
+
+    fill: white;
+    background-color: white;
+  transition: fill 1.2s ease;
+}
+
+path:hover {
+
+
+    fill: #76CE82;
+
+}
+
+.search_results{
+
+margin-top: 10px;
+margin-bottom: 10px;
+
+}
 
 ul{
 
     list-style-type: none;
   
+}
+
+.traffic-nav-link{
+
+margin-right: 10px;
+
 }
 
 .nav-button{
@@ -187,6 +241,13 @@ border-radius: 50%;
 
 }
 
+.timezone-section{
+
+
+    margin: 10px;
+
+}
+
 nav{
     display: flex;
     flex-direction: row;
@@ -230,12 +291,20 @@ grid-template-areas:
         
     }
 
-    .widget-container-full, .widget-container-half {
+    .widget-container-full {
         width: 95vw;
         padding: 5px;
-        margin-bottom: 35px;
+        margin-top: 35px;
         border-bottom: 1px solid grey ;
         }
+
+        .widget-container-half {
+            width: 95vw;
+            padding: 5px;
+            margin-top: 35px;
+            border-bottom: 1px solid grey ;
+            }
+        
 
     #traffic-nav{
 
@@ -246,18 +315,38 @@ grid-template-areas:
     }
 
     .social-image{
-
-        max-width: 30%;
-        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px ;
         margin-right: 15px;
+        background-color: purple;
+        border-radius: 100%;
+        overflow: visible;
+        margin-left: 20px;
 
     }
 
     .social-container svg{
 
-        width: 100%;
+        width: 37px;
         
 
+
+}
+
+.social-box{
+
+    display: flex;
+    flex-direction: row ;
+    background-color: lightgrey;
+    border: 1px solid grey;
+    width: 17em;
+    height: 100px;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 5px;
 
 }
 
@@ -267,6 +356,8 @@ grid-template-areas:
             border-bottom: 1px solid grey;
             padding: 20px;
             align-items: center;
+            justify-content: center;
+            
 
     }
 
@@ -285,13 +376,11 @@ grid-template-areas:
 
    
 
-    .members{
+    .recent-activity{
         
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-top: 40px;
-
-
+        /* padding-left: 20px;
+        padding-right: 20px; */
+        border-top: 1px solid;
     }
 
     .members-container{
@@ -308,13 +397,13 @@ grid-template-areas:
             display: flex;
             color: white;
             background-color: purple;
-            max-width: 90%;
+            max-width: 94%;
             justify-content: space-between;
             margin: 0 auto;
-            margin-top: 40px;
-            margin-bottom: 40px;
-            padding: 12px;
-
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 10px;
+        border-radius: 4px;
 
 
     }
@@ -323,9 +412,8 @@ grid-template-areas:
         display: flex;
         justify-content:space-between;
         align-items: center;
-        margin-bottom: 40px;
-        padding: 12px;
-    
+        margin:10px;
+        margin-bottom: 20px;
     }
 
     label{
@@ -336,11 +424,12 @@ grid-template-areas:
 
     .settings{
 
-            margin-top: 40px;
+            margin-top: 20px;
             margin-bottom: 40px;
             padding: 5px;
             /* max-width: calc(); */
         padding-left: auto;
+        border-top: 1px solid grey;
 
     }
 
@@ -355,10 +444,6 @@ grid-template-areas:
         
         display: flex;
         flex-direction: column;
-        padding: 5px;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        border-bottom: 1px solid grey;
         border-top: 1px solid grey;
        
     
@@ -369,13 +454,14 @@ grid-template-areas:
 
 
         text-align: center;
+        margin: 10px;
 
 
     }
 
     .form-field, .form-area, .button-primary{
 
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         margin-top: 10px;
         
@@ -410,9 +496,18 @@ grid-template-areas:
     .button-primary-save, .button-disabled{
 
         /* width: calc(45% - ); */
-        width: 42.5%;
+        width: 50%;
 
     }
+
+
+    .button-disabled{
+
+        /* width: calc(45% - ); */
+        margin-left: 20px;
+
+    }
+
 
     #timezone{
         margin-bottom: 12px;
@@ -428,7 +523,19 @@ grid-template-areas:
 
     @media (min-width: 768px) {
 
+        h3{
 
+            margin-top: 20px;
+            margin-left: 20px;
+            
+            }
+
+        .arrow{
+
+            display: block;
+        
+        }
+        
 
     .grid-container {
 
@@ -443,14 +550,14 @@ grid-template-areas:
 
         display: flex;
         flex-direction: column;
-       /* justify-content: flex-start;
-       margin: 0 auto; */
+       justify-content: flex-start;
 
     }
 
     .navi{
 
-       padding-bottom: 80px;
+      margin-bottom: 20px;
+       margin-top: 20px;
 
     }
 
@@ -460,7 +567,7 @@ grid-template-areas:
     }
 
 
-    .traffic,  .main-header, .alert, .message, .members, .social, .small-graphs-tablet, .settings{
+    .traffic,  .main-header, .alert, .message, .members, .recent-activity, .social, .small-graphs-tablet, .settings{
         grid-column: 1 / span 2;
         }
 
@@ -468,15 +575,15 @@ grid-template-areas:
             grid-column: 1 / span 1;
             }
             
-            .doughnut, .mobile, .activity {
+            .doughnut, .mobile, .activity{
                 grid-column: 2 / span 1;
                 }
 
                 .widget-container-full {
-                    width: 80vw;
+                    width: 88vw;
                     }
                     .widget-container-half {
-                    width: 40vw;
+                    width: 43vw;
                     }
 
                    
@@ -508,6 +615,7 @@ grid-template-areas:
             padding-top: 20px;
             padding-bottom: 20px;
             border-bottom: 1px solid grey;
+            justify-content: center;
         }
 
         .social-container{
@@ -548,8 +656,8 @@ grid-template-areas:
             border-bottom: 1px solid grey;
             width: 100%;
             display: flex;
-            justify-content: space-evenly;
-        
+            justify-content: center;
+
             
 
         }
@@ -585,12 +693,32 @@ grid-template-areas:
 
             align-self: flex-start;
             width: 50%;
+            margin: 20px;
         
         }
+
+
 
         .profile-image{
 
             width: 10%
+
+        }
+
+
+        .widget-container{
+
+            margin-left: 20px;
+        margin-right: 20px;
+    
+    
+        }
+
+        .timezone-section{
+
+
+            margin-left: 20px;
+            margin-right: 20px;
 
         }
 
@@ -609,22 +737,94 @@ grid-template-areas:
 
         
 
-            .settings{
+            .settings, .recent-activity{
                 grid-column: 2 / span 1;
                 }
 
 
         .message, .settings{
 
-                justify-content: space-between;
+                justify-content: flex-start;
 
         }
 
 
 
+        .recent-activity{
+
+            border-left: 1px solid grey;
+            border-top: none;
+
+        }
+        
+        .settings{
+
+            margin-top: 0px;
+            margin-bottom: 20px;
+            padding: 0px;
+            /* max-width: calc(); */
+        padding-left: auto;
+        border-top: 1px solid grey;
+        border-left: 1px solid grey;
+
+    }
+
+    .message{
+       
+        
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 0px;
+        border-bottom: none;
+        border-top: 1px solid grey;
+        margin-bottom: 20px;
+    
+
+    }
+
+    .form-area{
+
+                height:120px;
+
+    }
+
+    .toggle-container{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        margin-bottom: 0px;
+        padding: 12px;
+        padding-left: 0px;
+        margin-left: 20px;
+    }
+
+    .social-box{
+
+            width: 25em;
+            height: 130px;
+
+    }
+
+    .social-image{
+
+       width: 100px;
+       height: 100px;
+
+    }
+
+    .social-container svg{
+
+        width: 48.1px;
+        
 
 
+}
 
+.social{
+
+    padding-top: 0;
+}
 
     }
         
