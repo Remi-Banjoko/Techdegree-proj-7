@@ -10,7 +10,7 @@
 
 .flex-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: blueviolet;
     padding: 10px;
     align-items: center;
@@ -19,9 +19,20 @@
 
 .header-image{
 
-    width: 10%;
+    width: 15%;
     height: auto;
     border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+
+.header-flex{
+
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
 }
 
@@ -49,7 +60,7 @@ width: 100%
 
 h1{
 
-font-size: 1em;
+font-size: 1.5em;
 
 }
 
@@ -60,10 +71,11 @@ h3{
     margin-left: 10px;
     
     }
+
 .icon{
 
-    width:25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
 
 }
 
@@ -73,14 +85,32 @@ h3{
 }
 
 
+.green-dot{
 
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    display: absolute;
+    top: 80px;
+    left: 20px;
+    background-color: chartreuse;
+    
+}
 
 .bell{
     
     /* margin-top: 5px; */
-    margin-right: 5px;
-    border-right:   1px solid cornsilk;
+    margin-right: 10px;
+    align-self: flex-start;
+   
+}
 
+.bell-icon-container{
+    
+    /* height: 30px; */
+    width: 30px;
+    border-right: 1px solid lightgrey;
+    margin-right: 10px;
 
 }
 
@@ -342,7 +372,7 @@ grid-template-areas:
     flex-direction: row ;
     background-color: lightgrey;
     border: 1px solid grey;
-    width: 17em;
+    width: 18.8em;
     height: 100px;
     align-items: center;
     justify-content: flex-start;
@@ -354,7 +384,9 @@ grid-template-areas:
 
             display: flex;
             border-bottom: 1px solid grey;
-            padding: 20px;
+            /* padding: 20px; */
+            padding-top: 20px;
+            padding-bottom: 20px;
             align-items: center;
             justify-content: center;
             
@@ -533,6 +565,21 @@ grid-template-areas:
         .arrow{
 
             display: block;
+        
+        }
+
+        .header-image{
+
+            width:4%;
+
+        }
+
+        .header-flex{
+
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         
         }
         
@@ -722,6 +769,46 @@ grid-template-areas:
 
         }
 
+        .widget-container-full{
+
+
+           width:116vw; 
+
+        }
+
+        .widget-container-half{
+
+
+            width:55vw; 
+ 
+         }
+
+        .graph-headers{
+
+            margin-left: 0px;
+
+        }
+
+
+        .social-box{
+
+           
+            width: 17em;
+          
+        
+        }
+        
+             .social-container{
+        
+                    padding: 20px;
+                    padding-top: 0px;
+                    padding-bottom: 10px;
+                   
+                    
+        
+            }
+
+
     }
 
 
@@ -825,6 +912,15 @@ grid-template-areas:
 
     padding-top: 0;
 }
+
+.social-container{
+        
+    
+    padding-top: 20px;
+    
+
+}
+
 
     }
         
