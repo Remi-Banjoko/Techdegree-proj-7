@@ -7,6 +7,10 @@
     
 }
 
+canvas {
+    max-width: 100%;
+  }
+
 
 .flex-container{
     display: flex;
@@ -92,7 +96,6 @@ h3{
     border-radius: 50%;
     position: absolute;
     top: 0px;
-    left: 20px;
     background-color: chartreuse;
     
 }
@@ -629,9 +632,11 @@ grid-template-areas:
 
                 .widget-container-full {
                     width: 88vw;
+                    max-width: 100%;
                     }
                     .widget-container-half {
                     width: 43vw;
+                    max-width: 100%
                     }
 
                    
