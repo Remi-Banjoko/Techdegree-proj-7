@@ -7,6 +7,7 @@
     
 }
 
+
 canvas {
     max-width: 100%;
   }
@@ -80,6 +81,7 @@ h3{
 
     width: 20px;
     height: 20px;
+    
 
 }
 
@@ -95,7 +97,8 @@ h3{
     height: 5px;
     border-radius: 50%;
     position: absolute;
-    top: 0px;
+    top: -5px;
+    left: 15px;
     background-color: chartreuse;
     
 }
@@ -104,7 +107,6 @@ h3{
     
     /* margin-top: 5px; */
     margin-right: 10px;
-    align-self: flex-start;
    
 }
 
@@ -230,7 +232,7 @@ background: yellowgreen;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    z-index: -1;
 }
 
 h2{
@@ -326,14 +328,14 @@ grid-template-areas:
     }
 
     .widget-container-full {
-        width: 95vw;
+        width: 100%;
         padding: 5px;
         margin-top: 35px;
         border-bottom: 1px solid grey ;
         }
 
         .widget-container-half {
-            width: 95vw;
+            width: 100%;
             padding: 5px;
             margin-top: 35px;
             border-bottom: 1px solid grey ;
@@ -357,14 +359,14 @@ grid-template-areas:
         margin-right: 15px;
         background-color: purple;
         border-radius: 100%;
-        overflow: visible;
+        /* overflow: visible; */
         margin-left: 20px;
 
     }
 
     .social-container svg{
 
-        width: 37px;
+        width: 46%;
         
 
 
@@ -591,7 +593,7 @@ grid-template-areas:
     .grid-container {
 
 
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 8% 1fr;
     grid-template-areas:
     "header header"
     "navigation main";
@@ -602,6 +604,9 @@ grid-template-areas:
         display: flex;
         flex-direction: column;
        justify-content: flex-start;
+       align-items: center;
+       padding-left: 0px;
+       padding-right: 0px;
 
     }
 
@@ -614,7 +619,7 @@ grid-template-areas:
 
     .main {
             
-        grid-template-columns: 50% ;
+        grid-template-columns: 2fr;
     }
 
 
@@ -631,19 +636,21 @@ grid-template-areas:
                 }
 
                 .widget-container-full {
-                    width: 88vw;
-                    max-width: 100%;
+                    width: 100%;
+                    padding: 0px;
+                   
                     }
                     .widget-container-half {
-                    width: 43vw;
-                    max-width: 100%
+                    width: 100%;
+                    
                     }
 
                    
         .traffic{
 
             margin: 0 auto;
-
+            width: 100%;
+            padding: 20px;
             
         }
         .traffic-header{
@@ -663,23 +670,48 @@ grid-template-areas:
 
 
         .social{
+            
+            width: 2fr;
 
             display: flex;
             padding-top: 20px;
             padding-bottom: 20px;
             border-bottom: 1px solid grey;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         .social-container{
 
             border-bottom: none;
+            max-width: 33.3%;
+
+        }
+
+        .social-image{
+
+            width: 50px;
+            height: 50px;
+            margin-left: 0px;
+
+
+
+        }
+
+
+        .social-title{
+
+           font-size: 1.0625em;
+        
+        }
+        
+        .social-stat{
+
+            font-size: 1.875em;
 
         }
 
         .members{
-          
- /* put a bottom border on this */
+
         }
         .members-container{
 
@@ -725,11 +757,13 @@ grid-template-areas:
 
             border-right: 1px solid grey;
             padding: 20px;
+            width: 50%;
         }
 
         .doughnut{
 
             padding: 20px;
+            width: 50%;
         }
 
         .settings{
@@ -778,14 +812,14 @@ grid-template-areas:
         .widget-container-full{
 
 
-           width:116vw; 
+           width:2fr; 
 
         }
 
         .widget-container-half{
 
 
-            width:55vw; 
+            width:1fr; 
  
          }
 
@@ -800,6 +834,9 @@ grid-template-areas:
 
            
             width: 17em;
+            max-width: 100%;
+            padding: 5px;
+            height: auto;
           
         
         }
@@ -809,6 +846,7 @@ grid-template-areas:
                     padding: 20px;
                     padding-top: 0px;
                     padding-bottom: 10px;
+                   justify-content: flex-start;
                    
                     
         
@@ -926,6 +964,7 @@ grid-template-areas:
     
 
 }
+
 
 
     }
