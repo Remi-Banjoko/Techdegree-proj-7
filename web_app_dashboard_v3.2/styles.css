@@ -619,7 +619,7 @@ grid-template-areas:
 
     .main {
             
-        grid-template-columns: 2fr;
+        grid-template-columns: 50%;
     }
 
 
@@ -671,7 +671,7 @@ grid-template-areas:
 
         .social{
             
-            width: 2fr;
+            /* width: 2fr; */
 
             display: flex;
             padding-top: 20px;
@@ -683,7 +683,7 @@ grid-template-areas:
         .social-container{
 
             border-bottom: none;
-            max-width: 33.3%;
+            flex-basis: 33.3333%;
 
         }
 
@@ -932,7 +932,7 @@ grid-template-areas:
 
     .social-box{
 
-            width: 25em;
+            /* width: 25em; */
             height: 130px;
 
     }
